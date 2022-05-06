@@ -1,0 +1,2 @@
+# Aprendizado da semana 
+Ao decorrer da semana eu aprendi a usar comandos no git bash, como os de criação de pastas **mkdir** e arquivos **touch**. Durante as aulas foi mostrado como fuciona o GitHub e como podemos criar commits. 
