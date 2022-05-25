@@ -1,49 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/controle.css">
     <title>Adicionar Produto</title>
 </head>
+
 <body>
     <header>
-        <p>Loja profissional</p>
+        <div class="paragrafo">
+            <p>Loja profissional</p>
+        </div>
     </header>
-    
+
     <nav>
         <a href="./index.html">Página Inicial</a>
         <a href="./ctrl-estoque.html">Controle de Estoque</a>
         <a href="./add-produto.html">Adicionar Produto</a>
         <a href="./funcionarios.html">Funcionários</a>
+        <a href="./vendas.html">Pagina de vendas</a>
+        <a href="./historico.html">Historico</a>
     </nav>
 
-    
+
     <h2>Adicionar Produto</h2>
     <form action="">
-            <label for="link-foto">Link para foto: </label>
-            <input type="url" id="link-foto" name="link-foto" >
-            <br>
-     
-            <label for="descricao">Descrição do produto: </label>
-            <!-- Adicione o id apropriado para o input abaixo -->
-            <input type="text" id="texto" name="descrição">
-            <br>
-            <label for="preco">Preço (em R$): </label>
-            <!-- Adicione o id apropriado e o type para receber números abaixo -->
-            <input type="text" id="textoUm" name="preço">
-            <br>
+        <label for="link-foto">Link para foto: </label>
+        <input type="url" id="link-foto" name="link-foto">
+        <br>
 
-            <!-- Preencha as propriedades necessárias para os elementos abaixo -->
-            <label for="quantidade">Quantidade disponível: </label>
-            <input type="text" id="texto" nome="texto">
+        <label for="descricao">Descrição do produto: </label>
+        <!-- Adicione o id apropriado para o input abaixo -->
+        <input type="text" id="texto" name="descrição">
+        <br>
+        <label for="preco">Preço (em R$): </label>
+        <!-- Adicione o id apropriado e o type para receber números abaixo -->
+        <input type="text" id="textoUm" name="preço">
+        <br>
 
-            <br>
-            <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
-            <label for="texto"></label>
-            <button type="button" id="botao" nome="botao">Adicionar</button>
-            
+        <!-- Preencha as propriedades necessárias para os elementos abaixo -->
+        <label for="quantidade">Quantidade disponível: </label>
+        <input type="text" id="texto" nome="texto">
+
+        <br>
+        <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
+        <label for="texto"></label>
+        <button type="button" id="botao" nome="botao">Adicionar</button>
+
     </form>
+    <div class="rodape">
+        <footer>
+            <p>Siga-nos nas redes sociais!</p>
+            <a href="https://www.instagram.com/"><img src="./img/instgrammenor.png" alt=""></a>
+            <a href="https://twitter.com/home?lang=pt"><img src="./img/twiter.png" alt=""></a>
+            <a href="https://www.whatsapp.com/?lang=pt_br"><img src="./img/whatsapp.png" alt=""></a>
 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis consectetur
+                quam et nesciunt ad error labore ipsam rem, impedit officia itaque
+                quidem deleniti accusamus, id pariatur deserunt! Accusamus,
+                corporis illum!</p>
+
+            <img src="" alt="">
+
+            <span>Copyright &copy; 2022 - by</span>
+        </footer>
+        </div>
 </body>
+
 </html>
