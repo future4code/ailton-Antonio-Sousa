@@ -1,0 +1,87 @@
+   @import url('https://fonts.googleapis.com/css2? family= Lato & display=swap'); 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+body {
+    font-family: "Lato", sans-serif;
+    line-height: 30px;
+}
+.container {
+    background-color: #ccc;
+    background-image: url(../img/image1.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.70;
+    height: 100vh;
+}
+.title_area {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   color: white;
+}
+.title_center {
+    background-color: #111;
+    padding: 20px;
+    text-transform: uppercase;
+}
+.title_center h1 {
+    letter-spacing: 8px;
+    font-size: 28px;
+}
+
+/* section1 */
+
+.content {
+    padding: 50px 80px;
+    text-align: center;
+}
+.text_area {
+   
+}
+.text_infor h1  {
+   color: #666;
+   margin-bottom: 15px;
+}
+    
+/* 2 */
+
+.pimg2, .pimg3 {
+    background-image: url(../img/image2.jpg);
+    min-height: 400px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.title_pimg2, .title_pimg3 {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+.infor_pimg2 h1  {
+    
+}
+.content.dark  {
+    background-color: #282e34;
+}
+.content.dark .text_infor p {
+    color: white;
+}
+
+/*parte 3*/
+
+.pimg3 {
+    background-image: url(../img/image3.jpg);
+}
