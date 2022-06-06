@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 10vh 90vh
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: bisque;
+    padding: 10px;
+}
+.menu_left h1 {
+    background-color: #FF9B3A ;
+    color: white;
+    border-radius: 6px;
+    padding: 8px;
+}
+.menu_right p {
+    padding: 12px;
+    background-color: #ccc;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+main video {
+width: 50%;
+}
