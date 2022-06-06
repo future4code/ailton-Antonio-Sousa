@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: mediumvioletred;
+}
+
+.menu_left {
+    display: flex;
+    align-items: center;
+}
+.menu_left h1 {
+    margin-left: 15px;
+    font-size: 22px;
+}
+
+.menu_left img {
+    width: 18px;
+}
+
+/*section*/
+#bar {
+    display: flex;
+    min-height: calc(100vh - 70px);
+}
+.bar_lateral {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    flex-grow: 1;
+    background-color: #f2d0e0;
+}
+.bar_content {
+    display: flex;
+    flex-grow: 4;
+}
+/* barra lateral*/
+.lateral_flex {
+   display: flex;
+   align-items: center;
+   padding: 10px;
+}
+.lateral_flex img {
+    max-width: 20px;
+    max-height: 20px;
+    margin-right: 5px;
+}
+.teste {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 5px;
+}
+.seta img {
+    max-width: 20px;
+}
+
+/*section bolos*/
+.area_img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+}
+.imgs {
+    max-width: 300px;
+    max-height: 400px;
+    text-align: center;
+    box-shadow:  3px 2px darkgray;
+    margin-left: 10px;
+}
+.imgs img {
+    max-width: 300px;
+}
+/*footer*/
+footer {
+    text-align: center;
+    background-color: mediumvioletred;
+    width: 100%;
+}

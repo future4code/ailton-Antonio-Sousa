@@ -1,0 +1,149 @@
+/* 1- #lago {
+    exibição: flexível;
+    justify-content: flex-end;
+}
+
+2- #lago {
+    exibição: flexível;
+    justify-content: center;
+}
+
+3-#lago {
+    exibição: flexível;
+    justify-content: space-around;
+}
+
+4-#lago {
+    exibição: flexível;
+    justify-content: space-between
+}
+
+5-#lago {
+    exibição: flexível;
+    align-items: flex-end;
+}
+
+6-#lago {
+    exibição: flexível;
+    justify-content: center;
+    align-items: center;
+}
+
+7- #lago {
+    exibição: flexível;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+8- #lago {
+    exibição: flexível;
+    flex-direction: row-reverse;
+}
+
+9- #lago {
+    exibição: flexível;
+    flex-direction: column;
+}
+
+10-#lago {
+    exibição: flexível;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+
+11-#lago {
+    exibição: flexível;
+    flex-direction: column;
+    justify-content: end;
+}
+
+12- #lago {
+    exibição: flexível;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+13- lago {
+    exibição: flexível;
+  flex-direction: row-reverse;
+  justify-content:center;
+  align-items: end;
+  }
+
+  14- #lago {
+    exibição: flexível;
+  }
+  
+  .amarelo {
+  order: 1
+  }
+
+  15-#lago {
+    exibição: flexível;
+  }
+  
+  .vermelho {
+  order: -1;
+  }
+  
+  16-#lago {
+    exibição: flexível;
+    align-items: flex-start;
+  }
+  
+  .amarelo {
+  align-self: flex-end
+  }
+
+  17-#lago {
+    exibição: flexível;
+    align-items: flex-start;
+  }
+  
+  .amarelo {
+  order: 1;
+  align-self: end;
+  }
+
+  18- #lago {
+    exibição: flexível;
+  flex-wrap: wrap
+  }
+
+  19-#lago {
+  exibição: flexível;
+flex-direction: column;
+flex-wrap: wrap;
+}
+
+20-#lago {
+    exibição: flexível;
+  flex-flow: column wrap
+  }
+
+  21-#lago {
+    exibição: flexível;
+    flex-wrap: embrulhar;
+  align-content: flex-start;
+  }
+
+  22- #lago {
+    exibição: flexível;
+    flex-wrap: embrulhar;
+  align-content: end;
+  }
+
+  23-#lago {
+    exibição: flexível;
+    flex-wrap: embrulhar;
+  flex-direction: column-reverse;
+  align-content: center;
+  }
+
+  24-#lago {
+    exibição: flexível;
+  flex-wrap: wrap-reverse;
+  flex-direction: column-reverse;
+  justify-content:center;
+  align-content: space-between;
+  } */
