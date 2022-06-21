@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+header {
+    height: 100px;
+    background-color: black;
+  
+}
+.header{
+    width: 1140px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+}
+.header_logo {
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+.header_logo__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #b28756;
+}
+.header_menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header_menu ul {
+    display: flex;
+}
+.header_menu ul,
+.header_menu li {
+    list-style: none;
+}
+.header_menu li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0px 10px;
+    color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid #000;
+}
+.header_menu li a:hover,
+.header_menu li a.active {
+    border-bottom: 5px solid #b28756;
+}
+
+/* PRIMEIRA SECTION COFING*/
+.banner {
+    height: calc(100vh - 100px);
+    background-color: #ccc;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden;
+}
+.banner .banner_sliders {
+    width: 1000vw;
+    height: 100%;
+}
+.banner .banner_slider {
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/*
+ PRIMEIRA SECTION CONTEÚDO
+*/
+.banner_slider__content  {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+.banner h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
+.banner h1 span {
+    color: #b28756;
+}
+.banner h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+}
+                              /* BOTÃO */
+.buttom {                                             
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 8px 15px ;
+    border-radius: 25px;
+    background-color: #b28756;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 30px;
+    font-weight: 600;
+}
+/* SEGUNDA SECTION*/   
+.default {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.section_title,
+.section_desc {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+}
+.section_title {
+    font-size: 20px;
+}
+.section_desc {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+/* SEGUNDA SECTION CONTEÚDO*/   
+
+.section_body {
+    width: 1140px;
+    margin: auto;
+}
+.section_aboutus {
+    display: flex;
+}
+.section_aboutus__left {
+    flex: 1;
+}
+.section_aboutus__left {
+    font-size: 14px;
+  line-height: 25px;
+}
+.section_aboutus__rigth{
+    width: 520px;
+}
+.section_aboutus__rigth img {
+    width: 480px;
+    box-shadow: 0px 5px 10px;
+}
+.default.light {
+    background-color: white;
+}
+.default.light .section_title {
+    color: #000;
+} 
+.default.dark {
+    background-color: #000;
+}
+.default.dark .section_title {
+    color: white;
+}
+.default.dark .section_body {
+    color: white;
+}
+
+/* TERCEIRA SECTION*/ 
+.section_aboutus {
+    align-items: center;
+    justify-content: center;
+}
+.section_aboutus__service {
+    flex: 1;
+    text-align: center;
+    text-transform: uppercase;
+    border-right: 1px solid #333;
+}
+.section_aboutus__service:first-child {
+    border-left: 1px solid #333;
+}
+.section_aboutus__service  img,
+.section_aboutus__service  p {
+    margin-top: 10px;
+}
+.section_aboutus__service  h2 {
+    margin-top: 10px;
+    font-size: 15px;
+}
+.section_aboutus__service  p {
+    font-size: 10px;
+}
+
+/*QUARTA SECTION*/
+.section_projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section_projects__top {
+    border: 1px solid #ccc;
+    background-color: #eee;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 0px 20px;
+}
+.section_projects__top ul,
+.section_projects__top li {
+    list-style: none;
+}
+.section_projects__top li {
+    text-transform: uppercase;
+    font-size: 13px;
+    display: inline-block;
+    padding: 10px;
+    border-left: 1px solid #ccc;
+    color: #555;
+    cursor: pointer;
+}
+.section_projects__top li:first-child {
+    border-left: 0;
+}
+.section_projects__top li:hover,
+.section_projects__top li.active {
+    border-bottom: 2px solid #b28756;
+}

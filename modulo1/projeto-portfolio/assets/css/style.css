@@ -1,0 +1,204 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.header {
+ 
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.menu_left h1 {
+    color: #7510F7;
+    cursor: pointer;
+}
+nav ul {
+    display: flex;
+}
+nav ul, nav li {
+    list-style: none;
+}
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px;
+    color: black;
+    font-weight: bold
+}
+nav a:hover {
+    background-color: #7510F7;
+    border-radius: 10px;
+    color: white;
+}
+
+/*section banner*/
+#banner {
+    padding: 20px;
+    background-color: #7510F7;
+}
+.container_two {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.card_title {
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+/* .container_two h1 {
+    text-align: center;
+    padding: 20px;
+    color: white;
+} */
+.card {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.cards_one {
+    width: 200px;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 1px 2px 8px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    text-align: center;
+}
+.cards_one p , .cards_two p {
+    text-align: justify;
+}
+.cards_two {
+    width: 200px;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 1px 2px 8px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    text-align: center;
+}
+.cards_one, .cards_two p {
+    color: white;
+}
+.cards_one img {
+    width: 100px;
+}.cards_two img {
+    width: 130px;
+}
+/*section bio*/
+.bio_area {
+ padding: 20px;
+ max-height: 500px;
+ box-shadow: 1px 2px 8px 1px rgba(0, 0, 0, 0.2);
+ border-radius: 6px;
+ display: flex;
+ justify-content: center;
+}
+.bio_text h2 {
+    color: #7510F7;
+    font-size: 28px;
+}
+.bio_text h2, p {
+    text-align: center;
+    max-width: 500px;
+}
+.bio_text p {
+    margin-top: 20px;
+    font-size: 20px;
+}
+.center p {
+    text-align: center;
+}
+/*Imagens projetos*/
+a img {
+    border-radius: 50%;
+}
+a img:hover {
+    opacity: 0.5;
+}
+
+/*form*/
+#formlario {
+   
+}
+form 
+{
+}
+.form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+label {
+    display: block;
+    padding: 10px;
+}
+input {
+    border:  none;
+    border-bottom: 1px solid black;
+    outline: none;
+    width: 300px;
+}
+.button {
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #999;
+}
+.qrcode img {
+    max-width: 320px;
+}
+/*footer*/
+
+footer {
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #999;
+}
+.footer_img {
+    text-align: center;
+}
+.footer_img img {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 16px;
+    margin: 30px;
+    cursor: pointer;
+}
+.footer_img img:hover {
+    background-color: #7510F7;
+
+}
+.copya  {
+    display: flex;
+    justify-content: center;
+}
+.copya p {
+  font-size: 12px; 
+}
+
+@media (max-width: 400px) {
+    .menu_left  {
+      margin: auto;
+    }
+    .menu_right {
+        display: none;
+    }
+    .bio_text h2 {
+        font-size: 20px;
+    }
+    .bio_text p {
+        font-size: 16px;
+    }
+}
