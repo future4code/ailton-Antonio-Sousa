@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import TelaCadastro from './Components/TelaCadastro'
+import TelaListaUsuario from './Components/TelaListaUsuario'
 import axios from 'axios'
 import styled from 'styled-components'
 
@@ -8,7 +10,7 @@ const Container = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-
+  font-family: Arial, Helvetica, sans-serif;
 `
 const AreaUsuario = styled.div`
     display: flex;
@@ -21,90 +23,47 @@ const AreaUsuario = styled.div`
     box-shadow: 0px 0px 16px darkgray;
     gap: 20px;
     input {
-        width: 50%;
+        width: 100%;
         height: 14px;
-    }
+  }
 `
-class App extends Component {
+class App extends React.Component {
   state = {
-    Email: '',
-    Name: '',
-    users: []
-  }
-  componentDidMount (){ this.getUsers()}
-   addUsers = () => {
-    const body = {
-      Name:this.state.Name,
-      Email:this.state.Email
-    }
-    axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users", 
-    body, {
-      headers:{
-        Authorization: "carlos-sousa-ailton"
-      }
-    })
-    .then((response)=>{
-      console.log(response)
-    })
-    .catch((error)=>{
-      console.log(error.message)
-    })
+    TelaAtual: 'cadastro'
   }
 
-  getUsers = () => {
-      axios
-      .get("https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users", 
-      {
-        headers: {
-          Authorization: "carlos-sousa-ailton"
-      }
-    }).then((response) => {
-      this.setState({users: response.data})
-      
-      console.log(response)
+ escolheTela = () => {
+ switch(this.state.TelaAtual) {
+  case "cadastro":
+    return <TelaCadastro irParaLista={this.irParaLista}/>
+   
+  case "lista":
+    return <TelaListaUsuario irParaCadastro={this.irParaCadastro}/>
+  
+  default:
+    return <p>Erro</p>
+ }
+}
 
-    }).catch((error)=> {
-      console.log(error.message)
-    })
-  }  
+irParaCadastro = () => {
+  this.setState({TelaAtual: "cadastro"})
+}
 
-  onChangeEmail = (event) => {
-    this.setState({
-      Email: event.target.value
-    })
-  }
-  onChangeName = (event) => {
-    this.setState({
-      Name: event.target.value
-    })
-  }
+irParaLista = () => {
+this.setState({TelaAtual: "lista"}) 
+}
   render() {
-  const Mostrartela = this.state.users?.map((item) => {
-    return <div key={item.id}>
-      <p>{item.Name}</p>
-    </div>
-  })
     return (
-     <Container>
-      <AreaUsuario>
-                <label>
-                Digite seu email:
-                    <input 
-                    value={this.state.Email}
-                    onChange={this.onChangeEmail}
-                    />
-                Digite seu Nome: 
-                    <input
-                    value={this.state.Name}
-                    onChange={this.onChangeName}
-                    />
-                </label>
-                    {Mostrartela}
-                    <button onClick={this.addUsers}>Criar Usuário</button>
-            </AreaUsuario>
-     </Container>
+      <Container>
+        <AreaUsuario>
+         {this.escolheTela()}
+        </AreaUsuario>
+      </Container>
     )
   }
 }
+
+
+
 export default App;
 
