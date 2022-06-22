@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import TelaCadastro from './Components/TelaCadastro'
 import TelaListaUsuario from './Components/TelaListaUsuario'
 import axios from 'axios'
+import TelaDetalheUser from './Components/TelaDetalheUser'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -19,7 +20,6 @@ const AreaUsuario = styled.div`
     align-items: center;
     padding: 20px;
     width: 600px;
-    height: 300px;
     box-shadow: 0px 0px 16px darkgray;
     gap: 20px;
     input {
@@ -29,34 +29,41 @@ const AreaUsuario = styled.div`
 `
 class App extends React.Component {
   state = {
-    TelaAtual: 'cadastro'
+    TelaAtual: 1,
   }
 
  escolheTela = () => {
  switch(this.state.TelaAtual) {
-  case "cadastro":
-    return <TelaCadastro irParaLista={this.irParaLista}/>
-   
-  case "lista":
-    return <TelaListaUsuario irParaCadastro={this.irParaCadastro}/>
-  
+  case 1:
+    return <TelaCadastro/>
+    break;
+  case 2:
+    return <TelaListaUsuario/>
+    break;
   default:
-    return <p>Erro</p>
+    return <p>Final</p>
  }
 }
-
-irParaCadastro = () => {
-  this.setState({TelaAtual: "cadastro"})
+irParaProxima = () => {
+  if(this.state.TelaAtual < 2) {
+  this.setState({
+    TelaAtual: this.state.TelaAtual + 1
+  })
+}
+}
+irParaAnterior = () => {
+  this.setState({
+    TelaAtual: this.state.TelaAtual - 1
+  })
 }
 
-irParaLista = () => {
-this.setState({TelaAtual: "lista"}) 
-}
   render() {
     return (
       <Container>
         <AreaUsuario>
-         {this.escolheTela()}
+        {this.escolheTela()}
+        {this.state.TelaAtual < 2 && <button   onClick={this.irParaProxima}>Próximo</button> }
+         <button   onClick={this.irParaAnterior}>voltar</button>
         </AreaUsuario>
       </Container>
     )

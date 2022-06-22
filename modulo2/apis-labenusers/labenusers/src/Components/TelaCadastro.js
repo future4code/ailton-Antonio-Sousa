@@ -39,7 +39,7 @@ export default class TelaCadastro extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.props.irParaLista}>Ir para lista</button>
+        
         <p>TelaCadastro</p>
         <input 
         placeholder={'Nome'}
