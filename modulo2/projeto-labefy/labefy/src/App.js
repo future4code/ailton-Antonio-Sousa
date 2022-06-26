@@ -25,7 +25,7 @@ const AreaInput = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  min-height: 500px;
 `
 class App extends Component {
   state = {

@@ -1,6 +1,51 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
 
+const Container = styled.div`
+  background-image: linear-gradient(to right, #2cd4d9, #5333ed );
+display: flex;
+flex-direction: column;
+justify-content: center;
+background-color: #999;
+min-height: 366px;
+width: 700px;
+padding: 4px;
+`
+const AreaMusic = styled.div`
+display: flex;
+flex: 1;
+justify-content: space-between;
+align-items: center;
+margin-top: 5px;
+margin-bottom: 5px;
+`
+const AreaInput = styled.div`
+text-align: center;
+flex: 1;
+margin: 0 auto;
+width: 400px;
+
+input {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 36px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  padding:0 10px; 
+}
+button {
+  background-color: #2cd4d9;
+  text-align: center;
+  width: 80%;
+  height: 36px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+`
 export default class Detalhes extends Component {
   state = {
     nome: "",
@@ -56,6 +101,20 @@ export default class Detalhes extends Component {
       console.log(err)
      })
   }
+
+  removerTracks = () => {
+    const url = `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks/:trackId`
+    axios.delete(url, {
+      headers: {
+        Authorization: "carlos-sousa-ailton"
+      }
+    }).then((res) => {
+      console.log(res.data)
+      this.mostrarPLayList()
+    }).catch((err) => {
+      console.log(err)
+    })
+  }
   onChangeNome = (event) => {
     this.setState({
       nome:event.target.value,
@@ -74,20 +133,24 @@ export default class Detalhes extends Component {
 
   render() {
    const ListaTracks = this.state.addLista.map((item, index) => {
-     return <div key={index}>
+     return <AreaMusic key={index}>
              <p>{item.name}</p>
              <p>{item.artist}</p>
+             <button>Apagar musica</button>
             <audio controls="controls" src={item.url}></audio>
-           </div>
+           </AreaMusic>
    })
     return (
-      <div>
+      <Container>
         {ListaTracks}
+        <AreaInput>
         <input placeholder='nome' value={this.state.nome} onChange={this.onChangeNome} />
         <input  placeholder='Artista'  value={this.state.artista} onChange={this.onChangeArtista}/>
         <input  placeholder='url'  value={this.state.url} onChange={this.onChangeUrl}/>
-        <button onClick={()=> this.addPlaylist()}>ADD playlist</button>
-      </div>
+        <button onClick={()=> this.addPlaylist()}>Adicionar</button>
+        </AreaInput>
+       
+      </Container>
     )
   }
 }
