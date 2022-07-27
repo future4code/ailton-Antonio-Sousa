@@ -100,7 +100,7 @@ function Post(props) {
 
         <PostHeader>
           <UserPhoto src={props.fotoUsuario} alt={"Imagem do usuario"} />
-          <p>Paulinha</p>
+          <p>{props.nomeUsuario}</p>
         </PostHeader>
         
 

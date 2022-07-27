@@ -13,7 +13,7 @@ function App() {
   return (
     <MainContainer>
       <Post
-        nomeUsuario={"paulinha"}
+        nomeUsuario={"paulo"}
         fotoUsuario={"https://picsum.photos/50/50"}
         fotoPost={"https://picsum.photos/200/150"}
       />
