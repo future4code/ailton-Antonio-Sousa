@@ -34,7 +34,6 @@ const PostFooter = styled.div`
 `;
 
 const UserPhoto = styled.img`
-  height: 30px;
   width: 30px;
   margin-right: 10px;
   border-radius: 50%;
@@ -42,6 +41,7 @@ const UserPhoto = styled.img`
 
 const PostPhoto = styled.img`
   width: 100%;
+  height: 290px;
 `;
 
 function Post(props) {
