@@ -1,4 +1,4 @@
-//Exercício 1
+// Exercício 1
 // function separar(texto:string,  data:string){
 //     let name = texto
 //     let res:string[] = data.split("/", 3)
@@ -7,15 +7,15 @@
 // }
 // console.log(separar("Carlos", "10/12/2001"))
 
-//Exercício 2 
+// Exercício 2 
 // function tipos(valor:any){
 //     return typeof valor
 // }
 // console.log(tipos(23))
 
-//Exercício 3
+// Exercício 3
 
-//Exercício 4 
+// Exercício 4 
 
 // enum setores {
 //     marketing = "marketing",
@@ -45,7 +45,7 @@
 // }
 // retornarPessoas(trabalhadores)
 
-//Exercício 5
+// Exercício 5
 
 // type usuarios = {
 //     name:string,
@@ -72,7 +72,7 @@
 
 // retornaEmail(users)
 
-//Exercício 6 
+// Exercício 6 
 
 // type client = {
 //     cliente: string,
@@ -106,7 +106,7 @@
 
 // console.table(novoDebito(clientes))
 
-//Exercício 7
+// Exercício 7
 
 // type client = {
 //     nome:string,
@@ -137,7 +137,7 @@
 // }
 // console.table(estoqueNew(array))
 
-//Exercício 8 
+// Exercício 8 
 // function identidade(nasc:string, ident:string){
 
 //     let resNasc:string[] = nasc.split("/", 3)
@@ -158,4 +158,6 @@
 
 // console.log(identidade("10/12/2001", "25/04/2022"))
 
-//Exercício 9 
+// Exercício 9 
+
+// Exercício 10 
