@@ -62,11 +62,29 @@ app.get("/produtos", (request, reponse) => {
 
 //ex5 editar preço
 
-app.put("/editPrice/:id", (request, reponse) => {
-    let idPrice = request.params.id
+app.put("/products/:id", (request, response) => {
+
+    let errorCode: number = 400;
 
 
-})
+        const { id } = request.params;
+        const { price } = request.body;
+
+
+        const productIndex = arrayProdutos.findIndex((item)=> {
+           return  item.id === id
+        });
+
+        // Alteração do preço do produto selecionado.
+        arrayProdutos[productIndex].price = price;
+
+        response.status(200).send({
+            message: "Product has been modified successfully!",
+            product: arrayProdutos[productIndex]
+        });
+    
+});
+
 
 //ex6 apagr item
 app.delete("/produtoDeletar/:id", (request, response) => {
