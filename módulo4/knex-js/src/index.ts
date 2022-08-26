@@ -6,16 +6,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-export const connection = knex({
-    client: "mysql",
-    connection: {
-        host: "35.226.146.116",
-        port: 3306,
-        user: "ailton-antonio-sousa",
-        password: "Kz?CLWhraacgwsuruLbg",
-        database: "ailton-antonio-sousa"
-    }
-});
+// aqui ficava o connect
 
 app.get("/getUser", async (req, res) => {
     try {
