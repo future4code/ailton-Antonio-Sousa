@@ -27,4 +27,32 @@ export class UserDatabase extends BaseDatabase {
         }
       
     }
+    
+    public async getAllusers(): Promise<User[]>{
+
+        try {
+            const users = await BaseDatabase.connection("user_cookenu")
+            .select('id', 'name', 'email');
+           
+            return users.map((user => User.toUserModel(user)))
+
+        } catch (error:any) {
+            throw new Error(error.sqlMessage || error.message)
+        }
+    
+    }
+
+    public async insertFollow(idSeguir:string, id_seguindo:string): Promise<string> {
+        try {
+            await BaseDatabase.connection('seguidores')
+            .insert({
+                id_seguir:idSeguir,
+                id_seguindo:id_seguindo
+            })
+
+            return `Pessoa com if ${idSeguir} esta seguindo a pessoa com id ${id_seguindo}`
+        } catch (error:any) {
+            throw new Error(error.sqlMessage || error.message)
+        }
+    }
 }

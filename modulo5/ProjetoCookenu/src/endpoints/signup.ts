@@ -19,6 +19,7 @@ export async function signup(req:Request, res:Response):Promise<void>{
         if(user){
             res.status(409).send("Esse Email já está cadastrado")
         }
+        
         const generateId = new GenereteId()
         const id  = generateId.generate()
         const hashManager = await new HassManager().passHash(password)
@@ -34,4 +35,6 @@ export async function signup(req:Request, res:Response):Promise<void>{
     } catch (error:any) {
         res.status(error.statusCode || 500).send({message: error.message})
     }
+    
+  
 }
